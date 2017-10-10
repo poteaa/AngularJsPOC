@@ -1,0 +1,29 @@
+<section>
+	<div class="title">{{vmGoals.title}}</div>
+	<table class="table table-condensed">
+		<thead>
+			<tr>
+				<th>Goal</th>
+				<th>User</th>
+				<th>Start Date</th>
+				<th>Due Date</th>
+				<th>Reviewer</th>
+				<th>Status</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="goal in vmGoals.goals">
+				<td>{{goal.Title}}</td>
+				<td>{{goal.UserName}}</td>
+				<td>{{goal.StartDate | date : "dd/MMM/yyyy"}}</td>
+				<td>{{goal.EndDate |  date : "dd/MMM/yyyy"}}</td>
+				<td>
+					{{goal.ReviewerName}}
+				</td>
+				<td>{{goal.Status}}</td>
+				<td><i class="fa fa-eye" ng-click="vmGoals.gotoGoal(goal.GoalId)"></i></td>
+			</tr>
+		</tbody>
+	</table>
+</section>

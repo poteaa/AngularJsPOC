@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+		
+		<link rel="stylesheet" href="../temp/styles.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.js"></script> -->
+		<script src="/bower_components/angular/angular.js"></script>
+		<script src="/bower_components/angular-route/angular-route.js"></script>
+		<script src="/bower_components/angular-animate/angular-animate.js"></script>
+		<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+		
+		<script src="src/client/app/app.module.js"></script>
+		<script src="src/client/app/core/core.module.js"></script>
+		<script src="src/client/app/login/login.module.js"></script>
+		<script src="src/client/app/widgets/widgets.module.js"></script>
+		<script src="src/client/app/menu/menu.module.js"></script>
+		<script src="src/client/app/home/home.module.js"></script>
+		<script src="src/client/app/user/user.module.js"></script>
+		<script src="src/client/app/goal/goal.module.js"></script>
+		<script src="src/client/app/core/mockeddatabase.js"></script>
+		<script src="src/client/app/core/dataservice.js"></script>
+		<script src="src/client/app/core/loginservice.js"></script>
+		<script src="src/client/app/login/login.controller.js"></script>
+		<script src="src/client/app/menu/menu.controller.js"></script>
+		<script src="src/client/app/menu/usermenu.controller.js"></script>
+		<script src="src/client/app/home/home.controller.js"></script>
+		<script src="src/client/app/user/users.controller.js"></script>
+		<script src="src/client/app/user/userDetail.controller.js"></script>
+		<script src="src/client/app/user/userGoals.controller.js"></script>
+		<script src="src/client/app/goal/goals.controller.js"></script>
+		<script src="src/client/app/goal/goalDetail.controller.js"></script>
+		<script src="src/client/app/goal/goalEdit.controller.js"></script>
+		<script src="src/client/app/home/home.route.js"></script>
+		<script src="src/client/app/user/user.route.js"></script>
+		<script src="src/client/app/goal/goal.route.js"></script>
+		<script src="src/client/app/login/login.directive.js"></script>
+		<script src="src/client/app/widgets/datepicker.directive.js"></script>
+		
+    </head>
+    <body>
+		<!-- <div ng-controller="Home"> -->
+		<!-- <div home-directive>  -->
+		<div id="container">
+			<header>
+				<div class="title">Achieve your goals</div>
+				<div class="headerinfo">Diego Alvarez POC</div>
+			</header>
+			
+			<div id="container-fluid">
+			
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" 
+						ng-include="'src/client/app/menu/usermenu.html'">
+					</div>
+				</div>
+				<div class="row">
+				
+					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" login-directive>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-include="'src/client/app/menu/leftmenu.html'">
+						</div>
+					</div>
+				
+					<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+						<!-- <div id="maincontent" ng-view></div> -->  <!--For $routeProvider-->
+						<div id="maincontent" ui-view></div>  <!--For $stateProvider-->
+					</div>
+				</div>
+			</div>
+			
+			<footer>
+				Copyright &copy; 2017, Achieve your goals
+			</footer>
+		</div>
+		
+    </body>
+</html>

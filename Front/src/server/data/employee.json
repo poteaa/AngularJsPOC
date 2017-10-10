@@ -1,0 +1,33 @@
+(function fakeData() {
+	var data =
+		[
+		  {
+			"id": 1,
+			"firstName": "Sandra",
+			"lastName": "Coronel",
+			"city": "Bogotá",
+			"country": "Colombia",
+			"thumbnail": "sandra.jpg",
+			"goals": 
+			[
+				{
+					"name": "Angular",
+					"date": "01/07/2015",
+					"status": 
+					"reviewer": 
+					[
+						"name": "Luis"
+					]
+				}
+			]
+		  },
+		  {
+			"id": 2,
+			"firstName": "Luis",
+			"lastName": "Díaz",
+			"city": "Bogotá",
+			"country": "Colombia",
+			"thumbnail": "luis.jpg"
+		  }
+		]
+})();

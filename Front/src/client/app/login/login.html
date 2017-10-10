@@ -1,0 +1,48 @@
+<div id="login" ng-controller="Login as login" >
+	<div ng-show="!login.isSignedIn">
+		<h4>Login</h4>
+		<form name="login_form" ng-submit="login.signIn()" novalidate method="post">
+				
+			<input type="text" name="name" ng-model="login.name" placeholder="Name" 
+				ng-minlength=3 ng-maxlength=10 required>
+			<div class="error" ng-show="login_form.name.$dirty && login_form.name.$invalid">
+				<small class="error" ng-show="login_form.name.$error.required">
+					Name is requiered
+				</small>
+				<small class="error" ng-show="login_form.name.$error.minlength">
+					User name too short
+				</small>
+				<small class="error" ng-show="login_form.name.$error.maxlength">
+					User name too long
+				</small>
+			</div>
+			
+			<input type="password" name="password" ng-model="login.password" placeholder="Password" 
+				required>
+			
+			<div class="error" ng-show="login_form.password.$dirty && login_form.password.$invalid">
+				<small class="error" ng-show="login_form.password.$error.required">
+					Password is requiered
+				</small>
+			
+			</div>
+			
+			<input type="submit" value="Login" ng-disabled="login_form.$invalid">
+			
+			<div class="error" ng-show="login.wrongSignin">
+				<small class="error">
+					Hum! It seems that you are not {{login.name}}
+				</small>
+			</div>
+		</form>
+		
+	</div>
+	<div ng-show="login.isSignedIn">
+		<div ng-if="login.isSignedIn">
+			<img ng-src="{{'/src/client/img/' + login.portrait}}" />
+		</div>
+		<div>Welcome, <span>{{login.name}}</span></div>
+		<input type="submit" value="Logout" ng-click="login.signOff();
+		login_form.name.$setPristine();login_form.password.$setPristine();">
+	</div>
+</div>

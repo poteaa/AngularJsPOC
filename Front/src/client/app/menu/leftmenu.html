@@ -1,0 +1,13 @@
+<nav id="leftmenu" ng-controller="Menu as menu">
+	<ul>
+		<li ng-class="menu.menuClass('/home')">
+			<a ng-href="#home"><i class="fa fa-home"></i>Home</a>
+		</li>
+		<li ng-class="menu.menuClass('/user.list')">
+			<a ng-href="#user/list"><i class="fa fa-users"></i>Users</a>
+			</li>
+		<li ng-class="menu.menuClass('/goal.list')">
+			<a ng-href="#goal/list"><i class="fa fa-flag"></i>Goals</a>
+		</li>
+	</ul>
+</nav>

@@ -1,0 +1,11 @@
+<section>
+	<div class="title">{{vmUserDet.title}}</div>
+	<div class="userInfo">
+		<img class="portrait" ng-src="/src/client/img/{{vmUserDet.detail.Portrait}}"} />
+		<ul>
+			<li><span>Name:</span> {{vmUserDet.detail.FirstName}} {{vmUserDet.detail.LastName}}</li>
+			<li><span>Project:</span> {{vmUserDet.detail.ProjectName}}</li>
+			<li><span>Can review:</span> {{vmUserDet.CanReview ? 'Yes' : 'No'}}</li>
+		</ul>
+	</div>
+</section>

@@ -1,0 +1,29 @@
+<section> 
+	<div class="title">{{vmGoalEdit.title}}</div>
+	<form id="editForm" name="goal_edit_form" ng-submit="vmGoalEdit.update()" novalidate></div>
+		<div>
+			<label>Title: </label>
+			<input type="text" ng-model="vmGoalEdit.goal.Title" placeholder="Technology to learn"></div>
+		<div>
+			<label>Description: </label>
+			<input type="text" ng-model="vmGoalEdit.goal.Description" placeholder="Full Description"></div>
+		<div>
+			<label>Start Date: </label>
+			<!-- <input type="text" id="startDate" ng-model="vmGoalEdit.goal.StartDate | date: 'dd/MM/yyyy'"></div> -->
+			<input jqdatepicker type="text" id="jqdatepicker1" ng-model="vmGoalEdit.goal.StartDate" />
+		</div>
+		<div>
+			<label>End Date: </label>	
+			<input jqdatepicker type="text" id="jqdatepicker2" ng-model="vmGoalEdit.goal.EndDate" />
+		</div>
+		<div>
+			<label>Reviewer: </label>
+			<select ng-model="vmGoalEdit.goal.ReviewerId" 
+				ng-options="rev.UserId as rev.FirstName for rev in vmGoalEdit.reviewers">
+				<option value="">Select...</option>
+			</select>
+		</div>
+		<input type="submit" value="Save">
+		<input type="button" value="Back" ng-click="vmGoalEdit.goBack()">
+	</form>
+</section>

@@ -1,0 +1,279 @@
+@back-color: #666;
+@main-color: #8e0800;
+@menu-color: #8e0800;
+@menu-hover-color: #fa9344;
+@menu-text-color: white;
+@button-color: #54a6d6;
+@light-grey: #e0dddd;
+@leftmenu-width: 200px;
+@fontSize: 14px;
+@border-radius: 4px;
+@padding: 0px;
+
+.menuoptions (@par-display){
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	li {
+		background: @menu-color;
+		border-radius: @border-radius;
+		.menuoptionsmarginbottom (@par-display);
+		display: @par-display;
+		:hover, &.active {
+			background: @menu-hover-color;
+		};
+	}
+	/* a:after { */
+		/* background: red; */
+		/* width: 5px; */
+		/* color: white; */
+		/* content: " a"; */
+	/* } */
+	a {
+		color: @menu-text-color;
+		padding: 10px 20px;
+		text-decoration: none;
+		display: block;
+	}
+	i {
+		padding-right: 15px;
+	}
+}
+
+.menuoptionsmarginbottom (@par-display)when (@par-display = block) {
+	margin-bottom: 3px;
+}
+
+.gradient (@direction, @startcolor, @endcolor) {
+	background: -webkit-linear-gradient(@direction, @endcolor, @startcolor); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@direction, @endcolor, @startcolor); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@direction, @endcolor, @startcolor); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@direction, @endcolor, @startcolor); /* Standard syntax (must be last) */
+}
+
+body {
+	background: @back-color !important;
+    font-size: @fontSize;
+	font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+	margin: 0px;
+}
+
+header {
+	margin: 10px auto 30px auto;
+	height: 100px;
+    background-image: url("/src/client/img/RE.jpg");
+	.title {
+		background: rgba(0, 0, 0, 0.75);
+		color: white;
+		font-size: 25px;
+		float: left;
+		padding: 20px;
+		border-bottom-right-radius: 20px;
+	}
+	.headerinfo {
+		float:right;
+		background: rgba(255, 255, 255, 0.95);
+		color: black;
+		padding: 10px;
+		font-weight: bold;
+		border-bottom-left-radius: 20px;
+	}
+}
+
+#container {
+	padding: 20px;
+    background: white;
+    margin: 20px 50px;
+    overflow: hidden;
+	border-radius: @border-radius;
+}
+
+nav#usermenu{
+	.menuoptions(inline-block);
+	.gradient(right, white, #666666);
+	margin: 0px -20px 20px 2*@padding;
+}
+
+nav#leftmenu {
+	.menuoptions(block);
+}
+
+#login {
+	padding: 10px;
+	margin: 30px auto 20px auto;
+	background: @light-grey;
+	border-radius: @border-radius;
+	text-align: center;
+	span {
+		font-weight: bold;
+	}
+	input[type="text"] {
+		margin: 4px;
+		padding: 0 0 0 3px;
+	}
+	input[type="submit"] {
+		background: @main-color;
+		padding: 5px 20px;
+		text-align: center;
+		margin: 10px 0px 5px 0px;
+		border: 0;
+		border-radius: @border-radius;
+		font-weight: bold;
+		color: white;
+	}
+	input[type="submit"]:disabled {
+		background: @main-color;
+		color: white;
+	}
+	input[type="submit"]:hover {
+		background: @menu-hover-color;
+	}
+	img {
+		width: 60px;
+		height: 60px;
+		margin: 5px auto 10px auto;
+		border-radius: 3px;
+	}
+}
+
+#maincontent {
+	padding: 0px;
+	margin: 0px;
+	section {
+		overflow: auto;
+		padding: 10px;
+		border: 1px solid #666666;
+		border-radius: @border-radius;
+		.title {
+			background: @menu-color;
+			text-align: center;
+			padding: 10px 0 10px 0;
+			font-weight: bold;
+			font-size: 20px;
+			margin: 0px auto 10px auto;
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+			color: @menu-text-color;
+		}
+	}
+	input[type="button"] {
+		background: @main-color;
+		padding: 5px 20px;
+		text-align: center;
+		margin: 10px 0px 5px 0px;
+		border: 0;
+		border-radius: @border-radius;
+		font-weight: bold;
+		color: white;
+	}
+	input[type="button"]:hover {
+		background: @menu-hover-color;
+	}
+	input[type="submit"] {
+		background: @main-color;
+		padding: 5px 20px;
+		text-align: center;
+		margin: 10px 0px 5px 0px;
+		border: 0;
+		border-radius: @border-radius;
+		font-weight: bold;
+		color: white;
+	}
+	input[type="submit"]:hover {
+		background: @menu-hover-color;
+	}
+}
+
+#editForm  {
+	text-align: center;
+	div:first-child {
+		padding-top: 20px;
+	}
+	div {
+		padding-bottom: 10px;
+	}
+	label {
+		width: 100px;
+		text-align: left;
+	}
+	select, input[type="text"]{
+		text-align: left;
+		width: 200px;
+	}
+}
+
+.userInfo {
+	width: auto;
+	overflow: auto;
+	overflow-x: hidden;
+	margin-top: 20px;
+	.portrait {
+		width: 200px;
+		height: 200px;
+		float: left;
+		border-radius: 5px;
+	}
+	ul{
+		list-style: none;
+		position: relative;
+		left: 20px;
+		span {
+			font-weight: bold;
+		}
+	}
+}
+
+.col-md-2,.col-md-12 {
+	/* padding-left: @padding !important; */
+}
+
+.error {
+	color: red;
+}
+
+.boxes {
+  /* display:table; */
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+  /* display: table-cell; */
+  /* text-align: center; */
+  /* vertical-align:middle; */
+  /* line-height: 13em; */
+  /* border-radius: 4px; */
+}
+
+.box1 {
+  /* background: orange; */
+  /* background-image: url("/src/client/img/RE1.jpg"); */
+  height:480px;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  img {
+	border-radius: 4px;
+  }
+}
+
+.box2 {
+  background: green;
+  background-image: url("/src/client/img/RE2.png");
+}
+
+.box3 {
+  background: yellow;
+}
+
+footer {
+	margin-top: 20px;
+	width: 100%;
+	height: 30px;
+	padding: 5px;
+	clear: both;
+	text-align: center;
+	background: @light-grey;
+	border-radius: 4px;
+}

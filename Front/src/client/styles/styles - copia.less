@@ -1,0 +1,250 @@
+@back-color: #666;
+@main-color: #3579a0;
+@menu-color: #2e6f9c;
+@menu-hover-color: #e64845;
+@menu-text-color: white;
+@button-color: #54a6d6;
+@light-grey: #e0dddd;
+@leftmenu-width: 200px;
+@fontSize: 14px;
+@border-radius: 4px;
+
+.menuoptions (@par-display){
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	li {
+		background: @menu-color;
+		border-radius: @border-radius;
+		.menuoptionsmarginbottom (@par-display);
+		display: @par-display;
+		:hover, &.active {
+			background: @menu-hover-color;
+		};
+	}
+	/* a:after { */
+		/* background: red; */
+		/* width: 5px; */
+		/* color: white; */
+		/* content: " a"; */
+	/* } */
+	a {
+		color: @menu-text-color;
+		padding: 10px 20px;
+		text-decoration: none;
+		display: block;
+	}
+	i {
+		padding-right: 15px;
+	}
+}
+
+.menuoptionsmarginbottom (@par-display)when (@par-display = block) {
+	margin-bottom: 3px;
+}
+
+.gradient (@direction, @startcolor, @endcolor) {
+	background: -webkit-linear-gradient(@direction, @endcolor, @startcolor); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@direction, @endcolor, @startcolor); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@direction, @endcolor, @startcolor); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@direction, @endcolor, @startcolor); /* Standard syntax (must be last) */
+}
+
+body {
+	background: @back-color !important;
+    font-size: @fontSize;
+	font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+	margin: 0px;
+}
+
+#container {
+	padding: 20px;
+    background: white;
+    margin: 20px 50px;
+    overflow: hidden;
+	border-radius: @border-radius;
+}
+
+header {
+	margin: 10px auto 30px auto;
+	height: 100px;
+    background-image: url("/src/client/img/Tech.jpg");
+	.title {
+		background: rgba(0, 0, 0, 0.75);
+		color: white;
+		font-size: 25px;
+		float: left;
+		padding: 20px;
+		border-bottom-right-radius: 20px;
+	}
+	.headerinfo {
+		float:right;
+		background: rgba(255, 255, 255, 0.95);
+		color: black;
+		padding: 10px;
+		font-weight: bold;
+		border-bottom-left-radius: 20px;
+	}
+}
+
+#content {
+	clear: both;
+	position: relative;
+	z-index: 10;
+}
+
+/* .usermenu { */
+	/* clear: both; */
+	/* transition: all linear 0.5s; */
+	/* position: relative; */
+	/* z-index: 0; */
+/* } */
+
+/* .ng-hide { */
+	/* height: 0px; */
+	/* /* width: 0px;*/ */
+/* } */
+
+#usermenu nav{
+	clear: both;
+	.menuoptions(inline-block);
+	.gradient(right, white, #666666);
+	margin: 0px -20px 30px 0px;
+}
+
+aside {
+    width: @leftmenu-width;
+    float: left;
+}
+
+nav#leftmenu {
+	.menuoptions(block);
+}
+
+#maincontent {
+	padding: 0px 40px;
+	section {
+		margin-left: 200px;
+		padding: 30px;
+		border: 1px solid #666666;
+		border-radius: @border-radius;
+		.title {
+			background: rgba(230, 72, 69, 0.89);
+			text-align: center;
+			padding: 10px 0 10px 0;
+			font-weight: bold;
+			font-size: 20px;
+			margin: 0px auto 10px auto;
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
+		}
+	}
+}
+
+table thead{
+	background: #2e889c;
+	color: @menu-text-color;
+}
+
+.userInfo, .goalInfo {
+    display: inline-block;
+    background: #eae7e7;
+    width: 100%;
+	ul {
+		padding: 10px;
+	}
+	li {
+		list-style: none;
+		padding: 2px
+	}
+}
+
+.portrait {
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding: 10px;
+}
+
+tr i {
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+#login {
+	padding: 10px;
+	margin: 30px auto 20px auto;
+	background: @light-grey;
+	border-radius: @border-radius;
+	text-align: center;
+	span {
+		font-weight: bold;
+	}
+	input[type="text"] {
+		margin: 4px;
+		padding: 0 0 0 3px;
+	}
+	input[type="submit"] {
+		background: @main-color;
+		padding: 5px 20px;
+		text-align: center;
+		margin: 10px 0px 5px 0px;
+		border: 0;
+		border-radius: @border-radius;
+		font-weight: bold;
+		color: white;
+	}
+	input[type="submit"]:disabled {
+		background: @main-color;
+		color: white;
+	}
+	input[type="submit"]:hover {
+		background: @menu-hover-color;
+	}
+	img {
+		width: 60px;
+		height: 60px;
+		margin: 5px auto 10px auto;
+	}
+}
+
+.error {
+	color: red;
+}
+
+.boxes {
+  display:table;
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+  display: table-cell;
+  text-align: center;
+  vertical-align:middle;
+  line-height: 13em;
+  border-radius: 4px;
+}
+
+.box1 {
+  background: orange;
+}
+
+.box2 {
+  background: green;
+}
+
+.box3 {
+  background: yellow;
+}
+
+footer {
+	width: 100%;
+	height: 30px;
+	padding: 5px;
+	clear: both;
+	text-align: center;
+	background: @light-grey;
+	border-radius: 4px;
+}

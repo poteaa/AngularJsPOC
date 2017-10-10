@@ -1,0 +1,22 @@
+<section>
+	<div class="title">{{vmUsers.title}}</div>
+	<table class="table table-condensed">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Project</th>
+				<th>City</th>
+				<th>Goals</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="user in vmUsers.users" ng-class="{success: user.isReviewer == true}">
+				<td>{{user.FirstName + ' ' + user.LastName}}</td>
+				<td>{{user.ProjectName}}</td>
+				<td>{{user.CityName}}</td>
+				<td><a ng-href="{{user.GoalsCount ? '#user/' + user.UserId + '/goals' : ''}}">
+				{{user.GoalsCount ? user.GoalsCount: ' '}}</a></td>
+			</tr>
+		</tbody>
+	</table>
+</section>

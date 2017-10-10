@@ -1,0 +1,35 @@
+<section>
+	<div class="title">{{vmUserGoals.title}}</div>
+	<div>
+		<table class="table table-condensed">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Start Date</th>
+					<th>Due Date</th>
+					<th>Reviewer</th>
+					<th>Status</th>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="goal in vmUserGoals.goals" id="userGoalsTR{{goal.GoalId}}">
+					<td>{{goal.Title}}</td>
+					<td>{{goal.StartDate | date : "dd/MMM/yyyy"}}</td>
+					<td>{{goal.EndDate | date : "dd/MMM/yyyy"}}</td>
+					<td>
+						{{goal.ReviewerName}}
+					</td>
+					<td>{{goal.Status}}</td>
+					<td><i class="fa fa-eye" ng-click="vmUserGoals.gotoGoal(goal.GoalId);"></i></td>
+					<td ng-show="vmUserGoals.canEdit" ng-click="vmUserGoals.editGoal(goal.GoalId)"><i class="fa fa-pencil" ng-click="alert('Hola');"></i></td>
+					<td ng-show="vmUserGoals.canEdit"><i class="fa fa-trash" ng-click="vmUserGoals.deleteGoal(goal.GoalId)"></i></td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="button" value="New Goal" ng-click="vmUserGoals.editGoal()">
+		<input type="button" value="Back" ng-click="vmUserGoals.goBack()">
+	</div>
+</section>

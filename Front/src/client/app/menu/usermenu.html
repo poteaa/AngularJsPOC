@@ -1,0 +1,15 @@
+<!-- <div id="usermenu" class="usermenu" ng-controller="UserMenu as menu" ng-hide="menu.id == 0"> -->
+<!-- <div id="usermenu" ng-controller="UserMenu as menu" ng-show="menu.id!=0"> -->
+<!-- ______________________________________________________ -->
+<!-- http://stackoverflow.com/questions/33687924/change-ng-show-in-another-controller -->
+<!-- http://plnkr.co/edit/SZl8S2WNpj2kDWiZvmfs?p=preview -->
+<nav id="usermenu" style="z-index:1" ng-controller="UserMenu as menu" ng-hide="menu.id == 0">
+	<ul style="z-index:1">
+		<li style="z-index:1" ng-class="menu.menuClass('/user/{{menu.id}}')">
+			<a ng-href="#user/{{menu.id}}"><i class="fa fa-address-card-o"></i>My profile</a>
+		</li>
+		<li style="z-index:1" ng-class="menu.menuClass('/user/{{menu.id}}/goals')">
+			<a ng-href="#user/{{menu.id}}/goals"><i class="fa fa-star" ></i>My Goals</a>
+		</li>
+	</ul>
+</nav>
