@@ -1,4 +1,7 @@
 (function () {
+	
+	'use strict';
+	
 	angular
 		.module('app.goal')
 		.controller('GoalEdit', GoalEdit);

@@ -1,6 +1,6 @@
 module.exports = function() {
 	var reader = {
-		readFileAsJson: readFileAsJson;
+		readFileAsJson: readFileAsJson('');
 	};
 	
 	return reader;

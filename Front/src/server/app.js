@@ -8,7 +8,7 @@ var app = express();
 // app.use('/src/client/app/dashboard', express.static("C:/Users/diealvar1/Documents/Study/Goals/src/client/app/dashboard"));
 // app.use('/src/client/core', express.static("C:/Users/diealvar1/Documents/Study/Goals/src/client/core"));
 
-app.use('/', express.static("C:/Users/diealvar1/Documents/Study/Goals/Front"));
+app.use('/', express.static("C:/Users/diealvar1/Documents/Study/AngularJS/Goals/Front"));
 
 app.get('/', function(req, resp) {
 	console.log(__dirname);

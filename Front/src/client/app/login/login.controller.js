@@ -1,5 +1,7 @@
 (function() {
 	
+	'use strict';
+	
 	angular
 		.module('app.login', ['app.menu'])
 		.controller('Login', Login);

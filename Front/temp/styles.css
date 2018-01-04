@@ -1,16 +1,17 @@
 body {
-  background: #666 !important;
+  background-color: #666 !important;
   font-size: 14px;
   font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
   margin: 0px;
 }
 header {
   margin: 10px auto 30px auto;
-  height: 100px;
-  background-image: url("/src/client/img/RE.jpg");
+  height: 150px;
+  background-image: url("/src/client/img/RE2.jpg");
+  background-position-y: 8%;
 }
 header .title {
-  background: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.75);
   color: white;
   font-size: 25px;
   float: left;
@@ -19,7 +20,7 @@ header .title {
 }
 header .headerinfo {
   float: right;
-  background: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.95);
   color: black;
   padding: 10px;
   font-weight: bold;
@@ -27,18 +28,12 @@ header .headerinfo {
 }
 #container {
   padding: 20px;
-  background: white;
+  background-color: white;
   margin: 20px 50px;
   overflow: hidden;
   border-radius: 4px;
 }
 nav#usermenu {
-  /* a:after { */
-  /* background: red; */
-  /* width: 5px; */
-  /* color: white; */
-  /* content: " a"; */
-  /* } */
   background: -webkit-linear-gradient(right, #666666, white);
   /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(right, #666666, white);
@@ -47,11 +42,13 @@ nav#usermenu {
   /* For Firefox 3.6 to 15 */
   background: linear-gradient(right, #666666, white);
   /* Standard syntax (must be last) */
-  margin: 0px -20px 20px 0px;
+  padding: 0;
+  margin-bottom: 20px;
 }
 nav#usermenu ul {
   list-style: none;
   padding: 0;
+  margin: 0 auto 0 auto;
 }
 nav#usermenu li {
   background: #8e0800;
@@ -71,17 +68,16 @@ nav#usermenu a {
 nav#usermenu i {
   padding-right: 15px;
 }
+nav#usermenu li {
+  width: 200px;
+}
 nav#leftmenu {
-  /* a:after { */
-  /* background: red; */
-  /* width: 5px; */
-  /* color: white; */
-  /* content: " a"; */
-  /* } */
+  margin: 0 auto 0 auto;
 }
 nav#leftmenu ul {
   list-style: none;
   padding: 0;
+  margin: 0 auto 0 auto;
 }
 nav#leftmenu li {
   background: #8e0800;
@@ -103,11 +99,13 @@ nav#leftmenu i {
   padding-right: 15px;
 }
 #login {
-  padding: 10px;
-  margin: 30px auto 20px auto;
-  background: #e0dddd;
+  margin: 0 auto 20px auto;
+  background-color: #e0dddd;
   border-radius: 4px;
   text-align: center;
+}
+#login h4 {
+  padding-top: 8px;
 }
 #login span {
   font-weight: bold;
@@ -117,7 +115,7 @@ nav#leftmenu i {
   padding: 0 0 0 3px;
 }
 #login input[type="submit"] {
-  background: #8e0800;
+  background-color: #8e0800;
   padding: 5px 20px;
   text-align: center;
   margin: 10px 0px 5px 0px;
@@ -127,11 +125,11 @@ nav#leftmenu i {
   color: white;
 }
 #login input[type="submit"]:disabled {
-  background: #8e0800;
+  background-color: #8e0800;
   color: white;
 }
 #login input[type="submit"]:hover {
-  background: #fa9344;
+  background-color: #fa9344;
 }
 #login img {
   width: 60px;
@@ -140,17 +138,13 @@ nav#leftmenu i {
   border-radius: 3px;
 }
 #maincontent {
-  padding: 0px;
-  margin: 0px;
+  margin: 0 auto 0 auto;
 }
 #maincontent section {
-  overflow: auto;
-  padding: 10px;
-  border: 1px solid #666666;
   border-radius: 4px;
 }
 #maincontent section .title {
-  background: #8e0800;
+  background-color: #8e0800;
   text-align: center;
   padding: 10px 0 10px 0;
   font-weight: bold;
@@ -161,7 +155,7 @@ nav#leftmenu i {
   color: white;
 }
 #maincontent input[type="button"] {
-  background: #8e0800;
+  background-color: #8e0800;
   padding: 5px 20px;
   text-align: center;
   margin: 10px 0px 5px 0px;
@@ -171,10 +165,10 @@ nav#leftmenu i {
   color: white;
 }
 #maincontent input[type="button"]:hover {
-  background: #fa9344;
+  background-color: #fa9344;
 }
 #maincontent input[type="submit"] {
-  background: #8e0800;
+  background-color: #8e0800;
   padding: 5px 20px;
   text-align: center;
   margin: 10px 0px 5px 0px;
@@ -184,7 +178,7 @@ nav#leftmenu i {
   color: white;
 }
 #maincontent input[type="submit"]:hover {
-  background: #fa9344;
+  background-color: #fa9344;
 }
 #editForm {
   text-align: center;
@@ -214,7 +208,7 @@ nav#leftmenu i {
   width: 200px;
   height: 200px;
   float: left;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .userInfo ul {
   list-style: none;
@@ -224,28 +218,14 @@ nav#leftmenu i {
 .userInfo ul span {
   font-weight: bold;
 }
-.col-md-2,
-.col-md-12 {
-  /* padding-left: @padding !important; */
-}
 .error {
   color: red;
 }
 .boxes {
-  /* display:table; */
   width: 100%;
   height: 100%;
 }
-.box {
-  /* display: table-cell; */
-  /* text-align: center; */
-  /* vertical-align:middle; */
-  /* line-height: 13em; */
-  /* border-radius: 4px; */
-}
 .box1 {
-  /* background: orange; */
-  /* background-image: url("/src/client/img/RE1.jpg"); */
   height: 480px;
   margin: 0px;
   padding: 0px;
@@ -254,13 +234,6 @@ nav#leftmenu i {
 .box1 img {
   border-radius: 4px;
 }
-.box2 {
-  background: green;
-  background-image: url("/src/client/img/RE2.png");
-}
-.box3 {
-  background: yellow;
-}
 footer {
   margin-top: 20px;
   width: 100%;
@@ -268,6 +241,19 @@ footer {
   padding: 5px;
   clear: both;
   text-align: center;
-  background: #e0dddd;
+  background-color: #e0dddd;
   border-radius: 4px;
+}
+@media screen and (max-width: 800px) {
+  nav#usermenu ul {
+    background: white;
+  }
+  nav#usermenu li {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 3px;
+  }
+  nav#leftmenu li {
+    width: 100%;
+  }
 }

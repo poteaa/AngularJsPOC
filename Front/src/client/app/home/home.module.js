@@ -1,5 +1,7 @@
 (function() {
 	
+	'use strict';
+	
 	angular
 		// next line is to use $stateProvider
 		//.module('app.home', ['app.core', 'ngRoute']);    // To use routeProvider

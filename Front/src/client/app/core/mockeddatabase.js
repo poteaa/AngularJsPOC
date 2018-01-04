@@ -1,5 +1,7 @@
 (function() {
 	
+	'use strict';
+	
 	angular
 		.module('app.core')
 		.factory('mockeddatabase', mockeddatabase);
@@ -16,7 +18,7 @@
 					"firstName": "Leon",
 					"lastName": "Kennedy",
 					"project": "MF",
-					"city": "Bogotá",
+					"city": "Bogotï¿½",
 					"country": "Colombia",
 					"portrait": "LeonKennedy.jpg",
 					"isReviewer": false
@@ -28,7 +30,7 @@
 					"firstName": "Claire",
 					"lastName": "Redfield",
 					"project": "MF",
-					"city": "Bogotá",
+					"city": "Bogotï¿½",
 					"country": "Colombia",
 					"portrait": "ClaireRedfield.jpg",
 					"isReviewer": true
@@ -40,7 +42,7 @@
 					"firstName": "Sandra",
 					"lastName": "Coronel",
 					"project": "MF",
-					"city": "Bogotá",
+					"city": "Bogotï¿½",
 					"country": "Colombia",
 					"portrait": "sandra.jpg",
 					"isReviewer": false
@@ -50,9 +52,9 @@
 					"userName": "Luis",
 					"password": "1",
 					"firstName": "Luis",
-					"lastName": "Díaz",
+					"lastName": "Dï¿½az",
 					"project": "MF",
-					"city": "Bogotá",
+					"city": "Bogotï¿½",
 					"country": "Colombia",
 					"portrait": "luis.jpg",
 					"isReviewer": true
